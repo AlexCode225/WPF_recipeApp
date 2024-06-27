@@ -1,0 +1,276 @@
+﻿<Window x:Class="RecipeApp_Part3.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecipeApp_Part3"
+        mc:Ignorable="d"
+        
+        Title="Window3" Height="600" Width="900">
+
+    <Window.Background>
+        <ImageBrush ImageSource="Images/RecipImagebg.jpeg" />
+    </Window.Background>
+
+
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Column="0">
+
+            <Image Height="50" Width="50"
+             HorizontalAlignment="Left"
+             Source="Images/food-menu.png"
+             Margin="30,10,0,0"/>
+
+
+            <Label Content="Ingredients Details"
+             FontFamily="Gill Sans"
+             FontSize="15"
+             Foreground="AntiqueWhite" Width="230"
+             Margin="0,-40,-120,0"/>
+            <TextBlock x:Name="Info" Text="Ingredients details to be stored"
+                 Foreground="AliceBlue"
+                 FontSize="10"
+                 FontFamily="Dosis"
+                 Width="206"
+                 HorizontalAlignment="Right"
+                 Height="45"
+                 TextWrapping="Wrap" Margin="-80,-40,-250,0"
+                 >
+                <TextBlock.Style>
+                    <Style/>
+                </TextBlock.Style>
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+                <TextBlock.OpacityMask>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF2A3775" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.OpacityMask>
+            </TextBlock>
+
+            <StackPanel Grid.Row="1" Height="488" HorizontalAlignment="Right">
+
+                <TextBlock Text="Ingredient name 1: "
+                 Foreground="AntiqueWhite"
+                 FontSize="14"
+                 FontFamily="Dosis"
+                 FontWeight="DemiBold"
+                 HorizontalAlignment="Right"
+                 Margin="10,30,18,0"/>
+                <TextBlock Text="Enter  Quantity "
+                 Foreground="AntiqueWhite"
+                 FontSize="14"
+                 FontFamily="Dosis"
+                 FontWeight="DemiBold"
+                 HorizontalAlignment="Right"
+                 Margin="10,30,18,0"/>
+                <TextBlock Text=" Enter Unit: "
+                 Foreground="AntiqueWhite"
+                 FontSize="14"
+                 FontFamily="Dosis"
+                 FontWeight="DemiBold"
+                 HorizontalAlignment="Center"
+                 Margin="130,30,10,0"/>
+
+                <TextBlock Text=" Enter Calories: "
+  Foreground="AntiqueWhite"
+  FontSize="14"
+  FontFamily="Dosis"
+  FontWeight="DemiBold"
+  HorizontalAlignment="Center"
+  Margin="130,30,10,0"/>
+
+                <TextBlock Text=" Choose Food Group "
+Foreground="AntiqueWhite"
+FontSize="14"
+FontFamily="Dosis"
+FontWeight="DemiBold"
+HorizontalAlignment="Center"
+Margin="130,30,10,0"/>
+
+
+                <TextBlock Text=" Steps to follow "
+Foreground="AntiqueWhite"
+FontSize="14"
+FontFamily="Dosis"
+FontWeight="DemiBold"
+HorizontalAlignment="Center"
+Margin="130,30,10,0"/>
+
+                <TextBox x:Name="tblSteps"
+Width="170"
+Height="42"
+Margin="100,1,0,0"
+HorizontalAlignment="Left"
+FontWeight="DemiBold"
+FontFamily="Dosis" BorderBrush="#FF0C44ED" Background="#FFF0F7FB"
+/>
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </StackPanel>
+
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Column="1" Margin="0,55,0,75">
+            <TextBox x:Name="tblRecipeName"      
+          Width="170"
+          Height="20"
+          Margin="50,45,0,-10"
+          HorizontalAlignment="Left"
+          FontWeight="DemiBold"
+          FontFamily="Dosis" 
+          />
+            <TextBox x:Name="tblNumbQuantity"      
+          Width="170"
+          Height="20"
+          Margin="50,35,0,-10"
+          HorizontalAlignment="Left"
+          FontWeight="DemiBold"
+          FontFamily="Dosis"
+          />
+            <TextBox x:Name="UnitMeasurement"
+          Width="170"
+          Height="20"
+          Margin="50,35,0,-10"
+          HorizontalAlignment="Left"
+          FontWeight="DemiBold"
+          FontFamily="Dosis"
+          />
+
+
+
+            <TextBox x:Name="tblCalories"
+Width="170"
+Height="20"
+Margin="50,35,0,-10"
+HorizontalAlignment="Left"
+FontWeight="DemiBold"
+FontFamily="Dosis"
+/>
+
+
+
+            <StackPanel Name="foodGroupList" Background="#FF2C4158" Width="493" Margin="0,20,0,0">
+                <RadioButton x:Name="foodG1" Content="Starchy Foods"  FontSize="15"  Checked="FoodGroupList_Checked" Foreground="#FFFEFAFA" Margin="0,10,0,0" />
+                <RadioButton x:Name="foodG2" Content="Vegetables and Fruits" FontSize="15" Checked="FoodGroupList_Checked" Foreground="#FFFEFAFA"/>
+                <RadioButton x:Name="foodG3" Content="Dry Beans, Peas, Lentils, and Soya"  Checked="FoodGroupList_Checked" FontSize="15" Foreground="#FFFEFAFA" />
+                <RadioButton x:Name="foodG4" Content="Chicken, Fish, Meat, and Eggs"  Checked="FoodGroupList_Checked" FontSize="15" Foreground="#FFFEFAFA"/>
+                <RadioButton x:Name="foodG5" Content="Milk and Dairy Products"  Checked="FoodGroupList_Checked" FontSize="15" Foreground="#FFFEFAFA"/>
+                <RadioButton x:Name="foodG6" Content="Fats and Oil"  FontSize="15" Checked="FoodGroupList_Checked" Foreground="#FFFEFAFA"/>
+                <RadioButton x:Name="foodG7" Content="Water" FontSize="15"  Checked="FoodGroupList_Checked"  Foreground="#FFFEFAFA"/>
+            </StackPanel>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <Button x:Name="btnSave"
+              Content="Save"
+                  Foreground="White"
+                  FontSize="15"
+                  FontWeight="Medium"
+                  Click="btnSaveRecipes_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Gill Sans"/>
+                        <Setter Property="Background" Value="green"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="black"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="25"
+                              CornerRadius="15"
+                              HorizontalAlignment="Right"
+                              Margin="150,40,50,0"
+                              Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+
+                </Button.Template>
+
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
