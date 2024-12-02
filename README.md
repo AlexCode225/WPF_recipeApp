@@ -2,6 +2,8 @@
 ![image](https://github.com/AlexCode225/WPF_recipeApp_PART3/assets/83403103/db380d1b-b79a-453a-b073-8bcf51a10052)
 
 # Recipe WPF App
+![recipe app screen](https://github.com/user-attachments/assets/259c6a11-2a76-441d-9e3b-118a03bda733)
+
 
 This is Wpf (Windows Presentation Foundation) RECIPE application where user  can manipulate the details of a single or multiple recipes.
 The app allows a friendly user interface with most similar functionalities or features.
